@@ -35,7 +35,7 @@ trojan
 else
 exp=$(grep -wE "^#÷ $user" "/usr/local/etc/xray/config.json" | cut -d ' ' -f 3 | sort | uniq)
 sed -i "/^#÷ $user $exp/,/^},{/d" /usr/local/etc/xray/config.json
-rm -rf /var/www/wwwroot/panel/socks5/socks5-$user.txt
+rm -rf /var/www/html/socks5/socks5-$user.txt
 rm -rf /user/log-socks5-$user.txt
 systemctl restart xray
 clear

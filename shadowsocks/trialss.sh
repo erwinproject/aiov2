@@ -16,7 +16,7 @@ sslink1="ss://${ss_base64}@$domain:443?path=/shadowsocks&security=tls&host=${dom
 sslink2="ss://${ss_base64}@$domain:80?path=/shadowsocks&security=none&host=${domain}&type=ws#${user}"
 sslink3="ss://${ss_base64}@$domain:443?security=tls&encryption=none&type=grpc&serviceName=shadowsocks-grpc&sni=$domain#${user}"
 rm -rf /tmp/log
-cat > /var/www/wwwroot/panel/shadowsocks/shadowsocks-$user.txt << END
+cat > /var/www/html/shadowsocks/shadowsocks-$user.txt << END
 ==========================
 Shadowsocks WS (CDN) TLS
 ==========================

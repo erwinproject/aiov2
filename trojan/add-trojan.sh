@@ -36,7 +36,7 @@ sed -i '/#trojan-grpc$/a\#& '"$user $exp"'\
 trojanlink1="trojan://$uuid@$domain:443?path=/trojan&security=tls&host=$domain&type=ws&sni=$domain#$user"
 trojanlink2="trojan://${uuid}@$domain:80?path=/trojan&security=none&host=$domain&type=ws#$user"
 trojanlink3="trojan://${uuid}@$domain:443?security=tls&encryption=none&type=grpc&serviceName=trojan-grpc&sni=$domain#$user"
-cat > /var/www/wwwroot/panel/trojan/trojan-$user.txt << END
+cat > /var/www/html/trojan/trojan-$user.txt << END
 ==========================
 Trojan WS (CDN) TLS
 ==========================

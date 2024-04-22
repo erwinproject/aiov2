@@ -12,7 +12,7 @@ sed -i '/#vless-grpc$/a\#= '"$user $exp"'\
 vlesslink1="vless://$uuid@$domain:443?path=/vless&security=tls&encryption=none&host=$domain&type=ws&sni=$domain#$user"
 vlesslink2="vless://$uuid@$domain:80?path=/vless&security=none&encryption=none&host=$domain&type=ws#$user"
 vlesslink3="vless://$uuid@$domain:443?security=tls&encryption=none&type=grpc&serviceName=vless-grpc&sni=$domain#$user"
-cat > /var/www/wwwroot/panel/vless/vless-$user.txt << END
+cat > /var/www/html/vless/vless-$user.txt << END
 ==========================
 Vless WS (CDN) TLS
 ==========================

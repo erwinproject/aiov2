@@ -35,7 +35,7 @@ shadowsocks
 else
 exp=$(grep -wE "^#! $user" "/usr/local/etc/xray/config.json" | cut -d ' ' -f 3 | sort | uniq)
 sed -i "/^#! $user $exp/,/^},{/d" /usr/local/etc/xray/config.json
-rm -rf /var/www/wwwroot/panel/shadowsocks/shadowsocks-$user.txt
+rm -rf /var/www/html/shadowsocks/shadowsocks-$user.txt
 rm -rf /user/log-ss-$user.txt
 systemctl restart xray
 clear

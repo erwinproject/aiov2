@@ -35,7 +35,7 @@ trojan
 else
 exp=$(grep -wE "^#& $user" "/usr/local/etc/xray/config.json" | cut -d ' ' -f 3 | sort | uniq)
 sed -i "/^#& $user $exp/,/^},{/d" /usr/local/etc/xray/config.json
-rm -rf /var/www/wwwroot/panel/trojan/trojan-$user.txt
+rm -rf /var/www/html/trojan/trojan-$user.txt
 rm -rf /user/log-trojan-$user.txt
 systemctl restart xray
 clear

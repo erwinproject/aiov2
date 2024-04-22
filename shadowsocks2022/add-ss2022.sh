@@ -41,7 +41,7 @@ ss2022link1="ss://${ss2022_base64}@$domain:443?path=/shadowsocks2022&security=tl
 ss2022link2="ss://${ss2022_base64}@$domain:80?path=/shadowsocks2022&security=none&host=${domain}&type=ws#${user}"
 ss2022link3="ss://${ss2022_base64}@$domain:443?security=tls&encryption=none&type=grpc&serviceName=shadowsocks2022-grpc&sni=$domain#${user}"
 rm -rf /tmp/log
-cat > /var/www/wwwroot/panel/shadowsocks2022/shadowsocks2022-$user.txt << END
+cat > /var/www/html/shadowsocks2022/shadowsocks2022-$user.txt << END
 ===============================
 Shadowsocks 2022 WS (CDN) TLS
 ===============================

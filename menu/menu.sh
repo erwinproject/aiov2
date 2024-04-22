@@ -34,7 +34,6 @@ MYIP=$(curl -sS ipv4.icanhazip.com)
 clear
 echo -e "${BB}————————————————————————————————————————————————————————${NC}"
 echo -e "               ${WB}----- [ Xray Script ] -----${NC}              "
-echo -e "            ${WB}----- [ Cahaya Integrasi ] -----${NC}              "
 echo -e "${BB}————————————————————————————————————————————————————————${NC}"
 echo -e " ${YB}Public IP${NC}        ${WB}: $MYIP"
 echo -e " ${YB}Service Provider${NC} ${WB}: $ISP"

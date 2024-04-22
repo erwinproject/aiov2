@@ -153,7 +153,7 @@ sockslink1="socks://$socks_base64@$domain:443?path=/socks5&security=tls&host=$do
 sockslink2="socks://$socks_base64@$domain:80?path=/socks5&security=none&host=$domain&type=ws#$user"
 sockslink3="socks://$socks_base64@$domain:443?security=tls&encryption=none&type=grpc&serviceName=socks5-grpc&sni=$domain#$user"
 rm -rf /tmp/log
-cat > /var/www/wwwroot/panel/allxray/allxray-$user.txt << END
+cat > /var/www/html/allxray/allxray-$user.txt << END
 ========================================
 ----- [ All Xray ] -----
 Vmess, Vless, Trojan

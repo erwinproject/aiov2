@@ -35,7 +35,7 @@ vmess
 else
 exp=$(grep -wE "^#@ $user" "/usr/local/etc/xray/config.json" | cut -d ' ' -f 3 | sort | uniq)
 sed -i "/^#@ $user $exp/,/^},{/d" /usr/local/etc/xray/config.json
-rm -rf /var/www/wwwroot/panel/vmess/vmess-$user.txt
+rm -rf /var/www/html/vmess/vmess-$user.txt
 rm -rf /user/log-vmess-$user.txt
 systemctl restart xray
 clear

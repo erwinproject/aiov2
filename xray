@@ -11,7 +11,7 @@ MB='\e[35;1m'
 CB='\e[35;1m'
 WB='\e[37;1m'
 secs_to_human() {
-    echo -e "${WB}Installation time : $(( ${1} / 3600 )) hours $(( (${1} / 60) % 60 )) minute's $(( ${1} % 60 )) seconds${NC}"
+echo -e "${WB}Installation time : $(( ${1} / 3600 )) hours $(( (${1} / 60) % 60 )) minute's $(( ${1} % 60 )) seconds${NC}"
 }
 start=$(date +%s)
 apt update -y
@@ -65,13 +65,18 @@ curl -s https://packagecloud.io/install/repositories/ookla/speedtest-cli/script.
 sudo apt-get install speedtest
 clear
 ln -fs /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
-mkdir -p /var/www/wwwroot/panel/vmess
-mkdir -p /var/www/wwwroot/panel/vless
-mkdir -p /var/www/wwwroot/panel/trojan
-mkdir -p /var/www/wwwroot/panel/shadowsocks
-mkdir -p /var/www/wwwroot/panel/shadowsocks2022
-mkdir -p /var/www/wwwroot/panel/socks5
-mkdir -p /var/www/wwwroot/panel/allxray
+apt install nginx -y
+cd
+rm /var/www/html/*.html
+rm /etc/nginx/sites-enabled/default
+rm /etc/nginx/sites-available/default
+mkdir -p /var/www/html/vmess
+mkdir -p /var/www/html/vless
+mkdir -p /var/www/html/trojan
+mkdir -p /var/www/html/shadowsocks
+mkdir -p /var/www/html/shadowsocks2022
+mkdir -p /var/www/html/socks5
+mkdir -p /var/www/html/allxray
 systemctl restart nginx
 clear
 touch /usr/local/etc/xray/domain
@@ -79,10 +84,10 @@ echo -e "${YB}Input Domain${NC} "
 echo " "
 read -rp "Input domain kamu : " -e dns
 if [ -z $dns ]; then
-    echo -e "Nothing input for domain!"
+echo -e "Nothing input for domain!"
 else
-    echo "$dns" > /usr/local/etc/xray/domain
-    echo "DNS=$dns" > /var/lib/dnsvps.conf
+echo "$dns" > /usr/local/etc/xray/domain
+echo "DNS=$dns" > /var/lib/dnsvps.conf
 fi
 clear
 systemctl stop nginx
@@ -211,37 +216,31 @@ chmod +x del-vless
 chmod +x extend-vless
 chmod +x trialvless
 chmod +x cek-vless
-
 chmod +x add-trojan
 chmod +x del-trojan
 chmod +x extend-trojan
 chmod +x trialtrojan
 chmod +x cek-trojan
-
 chmod +x add-ss
 chmod +x del-ss
 chmod +x extend-ss
 chmod +x trialss
 chmod +x cek-ss
-
 chmod +x add-ss2022
 chmod +x del-ss2022
 chmod +x extend-ss2022
 chmod +x trialss2022
 chmod +x cek-ss2022
-
 chmod +x add-socks
 chmod +x del-socks
 chmod +x extend-socks
 chmod +x trialsocks
 chmod +x cek-socks
-
 chmod +x add-xray
 chmod +x del-xray
 chmod +x extend-xray
 chmod +x trialxray
 chmod +x cek-xray
-
 chmod +x log-create
 chmod +x log-vmess
 chmod +x log-vless
@@ -250,7 +249,6 @@ chmod +x log-ss
 chmod +x log-ss2022
 chmod +x log-socks
 chmod +x log-allxray
-
 chmod +x menu
 chmod +x vmess
 chmod +x vless
@@ -286,7 +284,7 @@ clear
 echo ""
 echo ""
 echo -e "${BB}—————————————————————————————————————————————————————————${NC}"
-echo -e "              ${WB}MOD SCRIPT BY ERWINPROJECT ${NC}"
+echo -e "                     ${WB}MOD SCRIPT BY CAHAYA INTEGRASI${NC}"
 echo -e "${BB}—————————————————————————————————————————————————————————${NC}"
 echo -e "  ${WB}»»» Protocol Service «««  |  »»» Network Protocol «««${NC}  "
 echo -e "${BB}—————————————————————————————————————————————————————————${NC}"
