@@ -53,11 +53,11 @@
 # Installation
 - via WGET
 ```
-bash -c "$(wget -qO- https://raw.githubusercontent.com/erwinproject/aio/master/xray)"
+bash -c "$(wget -qO- https://raw.githubusercontent.com/erwinproject/aiov2/master/xray)"
 ```
 - via CURL
 ```
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/erwinproject/aio/master/xray)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/erwinproject/aiov2/master/xray)"
 ```
 
 # Hubungi saya jika ada yang perlu ditanyakan
